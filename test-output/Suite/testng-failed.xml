@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="KTCTC.regression.WebTablesTest2">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="verifyAllDetailsOfNewlyAddedUser"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClassOfA"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuiteMethod"/>
+          <include name="verifyAllDetailsOfEditedUser"/>
+          <include name="verifyExistingUserCanBeEdited"/>
+          <include name="verifyNewUserCanBeAddedOnWebTablePage"/>
+          <include name="verifyUserCanNavigateToWebTablePage"/>
+          <include name="verifyExistringUserCanBeDeleted"/>
+        </methods>
+      </class> <!-- KTCTC.regression.WebTablesTest2 -->
+      <class name="KTCTC.regression.WebTablesTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="verifyNewUserCanBeAddedOnWebTablePage"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClassOfA"/>
+          <include name="verifyExistringUserCanBeDeleted"/>
+          <include name="beforeSuite"/>
+          <include name="verifyAllDetailsOfEditedUser"/>
+          <include name="afterSuiteMethod"/>
+          <include name="verifyAllDetailsOfNewlyAddedUser"/>
+          <include name="verifyExistingUserCanBeEdited"/>
+          <include name="verifyUserCanNavigateToWebTablePage"/>
+        </methods>
+      </class> <!-- KTCTC.regression.WebTablesTest -->
+      <class name="selnium.MyFirstMavenProject.AssertsInTestNG.enableDependentInvocation">
+        <methods>
+          <include name="verifyUserCanSendEmail"/>
+          <include name="verifyUserCanLoginToSystem"/>
+        </methods>
+      </class> <!-- selnium.MyFirstMavenProject.AssertsInTestNG.enableDependentInvocation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
