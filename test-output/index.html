@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\A\AppData\Local\Temp\testng-eclipse--1867276362\testng-customsuite.xml</span>
+                    <span>C:\Users\A\AppData\Local\Temp\testng-eclipse-1944051768\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="KTCTC.regression.StudentRegistrationFormTest" hash-for-method="verifyNewStudentsInfoCanBeAddedOnFormPage">verifyNewStudentsInfoCanBeAddedOnFormPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +118,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="KTCTC.regression.AlertsTest" hash-for-method="verifyUserCanClickOnAlertButton">verifyUserCanClickOnAlertButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="KTCTC.regression.AlertsTest" hash-for-method="verifyUserCanNavigateToAlertsPage">verifyUserCanNavigateToAlertsPage</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="KTCTC.regression.StudentRegistrationFormTest" hash-for-method="verifyUserCanNavigateToStudentsRegFormPage">verifyUserCanNavigateToStudentsRegFormPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -124,24 +133,62 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">KTCTC.regression.AlertsTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">KTCTC.regression.StudentRegistrationFormTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserCanClickOnAlertButton">
-                  </a> <!-- verifyUserCanClickOnAlertButton -->
-                  <span class="method-name">verifyUserCanClickOnAlertButton</span>
+                  <a name="verifyNewStudentsInfoCanBeAddedOnFormPage">
+                  </a> <!-- verifyNewStudentsInfoCanBeAddedOnFormPage -->
+                  <span class="method-name">verifyNewStudentsInfoCanBeAddedOnFormPage</span>
+                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
+[public void KTCTC.regression.StudentRegistrationFormTest.verifyNewStudentsInfoCanBeAddedOnFormPage()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyNewStudentsInfoCanBeAddedOnFormPage([])
+Arguments: [(java.lang.String) Sandhya,(java.lang.String) Patil,(java.lang.String) sp@gmail.com,(java.lang.String) Female,(java.lang.Double) 8.965421358E9,(java.lang.Double) 29300.0,(java.lang.String) Maths, Chemistry,Hindi,History,Biology,Physics,(java.lang.String) Reading,(java.lang.String) C:\Users\A\eclipse-workspace\ABCD-main\ABCD-main\src\main\resources\screenShots\simple_01_05_2021_01_03_53.png,(java.lang.String) Mumbail near patole bridge ,(java.lang.String) Rajasthan,(java.lang.String) Jaipur]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+	at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">KTCTC.regression.StudentRegistrationFormTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserCanNavigateToAlertsPage">
-                  </a> <!-- verifyUserCanNavigateToAlertsPage -->
-                  <span class="method-name">verifyUserCanNavigateToAlertsPage</span>
+                  <a name="verifyUserCanNavigateToStudentsRegFormPage">
+                  </a> <!-- verifyUserCanNavigateToStudentsRegFormPage -->
+                  <span class="method-name">verifyUserCanNavigateToStudentsRegFormPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +196,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\A\AppData\Local\Temp\testng-eclipse--1867276362\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\A\AppData\Local\Temp\testng-eclipse-1944051768\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,7 +205,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;KTCTC.regression.AlertsTest&quot;/&gt;
+      &lt;class name=&quot;KTCTC.regression.StudentRegistrationFormTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -200,18 +247,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserCanClickOnAlertButton')
-data.setCell(0, 2, 'KTCTC.regression.AlertsTest')
-data.setCell(0, 3, 6435);
+data.setCell(0, 1, 'verifyNewStudentsInfoCanBeAddedOnFormPage')
+data.setCell(0, 2, 'KTCTC.regression.StudentRegistrationFormTest')
+data.setCell(0, 3, 247437);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUserCanNavigateToAlertsPage')
-data.setCell(1, 2, 'KTCTC.regression.AlertsTest')
-data.setCell(1, 3, 1937);
+data.setCell(1, 1, 'verifyUserCanNavigateToStudentsRegFormPage')
+data.setCell(1, 2, 'KTCTC.regression.StudentRegistrationFormTest')
+data.setCell(1, 3, 802);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -237,46 +284,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">KTCTC.regression.AlertsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">KTCTC.regression.StudentRegistrationFormTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClassOfA</span>
-                <span class="method-start">185 ms</span>
+                <span class="method-start">237 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void KTCTC.regression.AlertsTest.verifyUserCanNavigateToAlertsPage())</span>
-                <span class="method-start">50497 ms</span>
+                <span class="method-name">beforeMethod(public void KTCTC.regression.StudentRegistrationFormTest.verifyUserCanNavigateToStudentsRegFormPage(...)</span>
+                <span class="method-start">261447 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserCanNavigateToAlertsPage</span>
-                <span class="method-start">50572 ms</span>
+                <span class="method-name">verifyUserCanNavigateToStudentsRegFormPage</span>
+                <span class="method-start">261478 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyUserCanNavigateToAlertsPage status=SUCCESS method=AlertsTest.verifyUserCanNav...)</span>
-                <span class="method-start">52513 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void KTCTC.regression.AlertsTest.verifyUserCanClickOnAlertButton())</span>
-                <span class="method-start">52585 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyUserCanClickOnAlertButton</span>
-                <span class="method-start">52596 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifyUserCanClickOnAlertButton status=SUCCESS method=AlertsTest.verifyUserCanClick...)</span>
-                <span class="method-start">59033 ms</span>
+                <span class="method-name">afterMethod([TestResult name=verifyUserCanNavigateToStudentsRegFormPage status=SUCCESS method=StudentRegistratio...)</span>
+                <span class="method-start">262286 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">59037 ms</span>
+                <span class="method-start">262289 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuiteMethod</span>
-                <span class="method-start">63086 ms</span>
+                <span class="method-start">263089 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

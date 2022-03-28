@@ -3,18 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="KTCTC.regression.AlertsTest">
+      <class name="KTCTC.regression.StudentRegistrationFormTest">
         <methods>
           <include name="afterClass"/>
           <include name="afterMethod"/>
-          <include name="verifyUserCanClickOnAlertButton"/>
           <include name="beforeMethod"/>
           <include name="beforeClassOfA"/>
           <include name="beforeSuite"/>
           <include name="afterSuiteMethod"/>
-          <include name="verifyUserCanNavigateToAlertsPage"/>
+          <include name="verifyNewStudentsInfoCanBeAddedOnFormPage"/>
         </methods>
-      </class> <!-- KTCTC.regression.AlertsTest -->
+      </class> <!-- KTCTC.regression.StudentRegistrationFormTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

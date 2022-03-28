@@ -1,81 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60864" started-at="2022-03-23T15:55:10 IST" finished-at="2022-03-23T15:56:11 IST">
+  <suite name="Default suite" duration-ms="262844" started-at="2022-03-28T17:55:11 IST" finished-at="2022-03-28T17:59:34 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60864" started-at="2022-03-23T15:55:10 IST" finished-at="2022-03-23T15:56:11 IST">
-      <class name="KTCTC.regression.AlertsTest">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="beforeSuite" is-config="true" duration-ms="153" started-at="2022-03-23T15:55:10 IST" finished-at="2022-03-23T15:55:10 IST">
+    <test name="Default test" duration-ms="262844" started-at="2022-03-28T17:55:11 IST" finished-at="2022-03-28T17:59:34 IST">
+      <class name="KTCTC.regression.StudentRegistrationFormTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="beforeSuite" is-config="true" duration-ms="205" started-at="2022-03-28T17:55:11 IST" finished-at="2022-03-28T17:55:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClassOfA()[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="beforeClassOfA" is-config="true" duration-ms="50286" started-at="2022-03-23T15:55:11 IST" finished-at="2022-03-23T15:56:01 IST">
+        <test-method status="PASS" signature="beforeClassOfA()[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="beforeClassOfA" is-config="true" duration-ms="13731" started-at="2022-03-28T17:55:11 IST" finished-at="2022-03-28T17:55:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassOfA -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="beforeMethod" is-config="true" duration-ms="75" started-at="2022-03-23T15:56:01 IST" finished-at="2022-03-23T15:56:01 IST">
+        <test-method status="FAIL" signature="verifyNewStudentsInfoCanBeAddedOnFormPage()[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="verifyNewStudentsInfoCanBeAddedOnFormPage" duration-ms="247437" started-at="2022-03-28T17:55:25 IST" data-provider="getTestData" finished-at="2022-03-28T17:59:32 IST">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+[public void KTCTC.regression.StudentRegistrationFormTest.verifyNewStudentsInfoCanBeAddedOnFormPage()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyNewStudentsInfoCanBeAddedOnFormPage([])
+Arguments: [(java.lang.String) Sandhya,(java.lang.String) Patil,(java.lang.String) sp@gmail.com,(java.lang.String) Female,(java.lang.Double) 8.965421358E9,(java.lang.Double) 29300.0,(java.lang.String) Maths, Chemistry,Hindi,History,Biology,Physics,(java.lang.String) Reading,(java.lang.String) C:\Users\A\eclipse-workspace\ABCD-main\ABCD-main\src\main\resources\screenShots\simple_01_05_2021_01_03_53.png,(java.lang.String) Mumbail near patole bridge ,(java.lang.String) Rajasthan,(java.lang.String) Jaipur]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void KTCTC.regression.StudentRegistrationFormTest.verifyNewStudentsInfoCanBeAddedOnFormPage()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyNewStudentsInfoCanBeAddedOnFormPage([])
+Arguments: [(java.lang.String) Sandhya,(java.lang.String) Patil,(java.lang.String) sp@gmail.com,(java.lang.String) Female,(java.lang.Double) 8.965421358E9,(java.lang.Double) 29300.0,(java.lang.String) Maths, Chemistry,Hindi,History,Biology,Physics,(java.lang.String) Reading,(java.lang.String) C:\Users\A\eclipse-workspace\ABCD-main\ABCD-main\src\main\resources\screenShots\simple_01_05_2021_01_03_53.png,(java.lang.String) Mumbail near patole bridge ,(java.lang.String) Rajasthan,(java.lang.String) Jaipur]
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewStudentsInfoCanBeAddedOnFormPage -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="beforeMethod" is-config="true" duration-ms="30" started-at="2022-03-28T17:59:32 IST" finished-at="2022-03-28T17:59:32 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void KTCTC.regression.AlertsTest.verifyUserCanNavigateToAlertsPage()]]>
+                <![CDATA[public void KTCTC.regression.StudentRegistrationFormTest.verifyUserCanNavigateToStudentsRegFormPage()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyUserCanNavigateToAlertsPage()[pri:1, instance:KTCTC.regression.AlertsTest@17211155]" name="verifyUserCanNavigateToAlertsPage" duration-ms="1937" started-at="2022-03-23T15:56:01 IST" finished-at="2022-03-23T15:56:03 IST">
+        <test-method status="PASS" signature="verifyUserCanNavigateToStudentsRegFormPage()[pri:1, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="verifyUserCanNavigateToStudentsRegFormPage" duration-ms="802" started-at="2022-03-28T17:59:32 IST" finished-at="2022-03-28T17:59:33 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserCanNavigateToAlertsPage -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="afterMethod" is-config="true" duration-ms="7" started-at="2022-03-23T15:56:03 IST" finished-at="2022-03-23T15:56:03 IST">
+        </test-method> <!-- verifyUserCanNavigateToStudentsRegFormPage -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="afterMethod" is-config="true" duration-ms="2" started-at="2022-03-28T17:59:33 IST" finished-at="2022-03-28T17:59:33 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserCanNavigateToAlertsPage status=SUCCESS method=AlertsTest.verifyUserCanNavigateToAlertsPage()[pri:1, instance:KTCTC.regression.AlertsTest@17211155] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserCanNavigateToStudentsRegFormPage status=SUCCESS method=StudentRegistrationFormTest.verifyUserCanNavigateToStudentsRegFormPage()[pri:1, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="beforeMethod" is-config="true" duration-ms="10" started-at="2022-03-23T15:56:03 IST" finished-at="2022-03-23T15:56:03 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void KTCTC.regression.AlertsTest.verifyUserCanClickOnAlertButton()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyUserCanClickOnAlertButton()[pri:2, instance:KTCTC.regression.AlertsTest@17211155]" name="verifyUserCanClickOnAlertButton" duration-ms="6435" started-at="2022-03-23T15:56:03 IST" finished-at="2022-03-23T15:56:09 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserCanClickOnAlertButton -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="afterMethod" is-config="true" duration-ms="3" started-at="2022-03-23T15:56:09 IST" finished-at="2022-03-23T15:56:09 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserCanClickOnAlertButton status=SUCCESS method=AlertsTest.verifyUserCanClickOnAlertButton()[pri:2, instance:KTCTC.regression.AlertsTest@17211155] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="afterClass" is-config="true" duration-ms="1981" started-at="2022-03-23T15:56:09 IST" finished-at="2022-03-23T15:56:11 IST">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="afterClass" is-config="true" duration-ms="760" started-at="2022-03-28T17:59:33 IST" finished-at="2022-03-28T17:59:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuiteMethod()[pri:0, instance:KTCTC.regression.AlertsTest@17211155]" name="afterSuiteMethod" is-config="true" duration-ms="3125" started-at="2022-03-23T15:56:13 IST" finished-at="2022-03-23T15:56:17 IST">
+        <test-method status="PASS" signature="afterSuiteMethod()[pri:0, instance:KTCTC.regression.StudentRegistrationFormTest@2af004b]" name="afterSuiteMethod" is-config="true" duration-ms="585" started-at="2022-03-28T17:59:34 IST" finished-at="2022-03-28T17:59:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteMethod -->
-      </class> <!-- KTCTC.regression.AlertsTest -->
+      </class> <!-- KTCTC.regression.StudentRegistrationFormTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

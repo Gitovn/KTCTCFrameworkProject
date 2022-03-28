@@ -53,9 +53,7 @@ public class StudentRegistrationFormPage {
 		Actions action = new Actions(driver);
 		driver.findElement(firstNameOnStudentRegPage).sendKeys(fName);
 		driver.findElement(lastNameOnStudentRegPage).sendKeys(lName);
-		;
 		driver.findElement(emailOnStudentRegPage).sendKeys(email);
-		;
 
 		switch (gender) {
 		case "Male":

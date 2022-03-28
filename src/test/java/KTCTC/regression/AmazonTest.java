@@ -1,14 +1,38 @@
 package KTCTC.regression;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-public class AmazonTest {
-	
-	private WebDriver driver;
-	
-	By accountsAndListsOnHomePage = By.id("nav-link-accountList");
-	By searchBoxOnAmazonHomePage = By.id("twotabsearchtextbox");
-	By signInButtonUnderAccountsAndList = By.xpath("//*[@id='nav-flyout-ya-signin']//*[contains(text(),'Sign in')]");
+import com.uiFramework.KTCTC.Pages.AmazonPage;
+import com.uiFramework.KTCTC.helper.property.PropertyFileHelper;
+import com.uiFramework.KTCTC.testbase.TestBase;
 
+public class AmazonTest extends TestBase {
+
+	AmazonPage amazonPage;
+	String userEmail;
+	String userPassword;
+	PropertyFileHelper propertyHelper = new PropertyFileHelper("env.properties");
+
+	@Test (priority = 1)
+	public void verifyUserCanLoginToExistingAccount() {
+
+		amazonPage = new AmazonPage(driver);
+		userEmail = propertyHelper.getPropertyValueFromFile("email");
+		userPassword = propertyHelper.getPropertyValueFromFile("password");
+		amazonPage.loginToUsersExistingAmazonAccount(userEmail, userPassword);
+		boolean flag = amazonPage.isUserSuccessfullyLoggedIn();
+		Assert.assertTrue(flag);
+	}
+
+	@Test(priority = 2)
+	public void verifyUserRequiredItemIsAddetToCart() {
+		amazonPage.selectItemFromList();
+		amazonPage.getOriginalDiscountedPriceOfItem();
+		amazonPage.addItemToCart();
+		boolean flag = amazonPage.isUserSelectedItemAddedToCart();
+		Assert.assertTrue(flag);
+	}
+	
 }

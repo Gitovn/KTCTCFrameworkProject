@@ -9,11 +9,39 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">60,864</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">262,844</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">KTCTC.regression.AlertsTest</td><td><a href="#m0">verifyUserCanClickOnAlertButton</a></td><td rowspan="1">1648031163416</td><td rowspan="1">6435</td></tr><tr class="passedeven"><td><a href="#m1">verifyUserCanNavigateToAlertsPage</a></td><td rowspan="1">1648031161392</td><td rowspan="1">1937</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">KTCTC.regression.StudentRegistrationFormTest</td><td><a href="#m0">verifyNewStudentsInfoCanBeAddedOnFormPage</a></td><td rowspan="1">1648470325007</td><td rowspan="1">247437</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">KTCTC.regression.StudentRegistrationFormTest</td><td><a href="#m1">verifyUserCanNavigateToStudentsRegFormPage</a></td><td rowspan="1">1648470572512</td><td rowspan="1">802</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">KTCTC.regression.AlertsTest#verifyUserCanClickOnAlertButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">KTCTC.regression.AlertsTest#verifyUserCanNavigateToAlertsPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">KTCTC.regression.StudentRegistrationFormTest#verifyNewStudentsInfoCanBeAddedOnFormPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void KTCTC.regression.StudentRegistrationFormTest.verifyNewStudentsInfoCanBeAddedOnFormPage()] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyNewStudentsInfoCanBeAddedOnFormPage([])
+Arguments: [(java.lang.String) Sandhya,(java.lang.String) Patil,(java.lang.String) sp@gmail.com,(java.lang.String) Female,(java.lang.Double) 8.965421358E9,(java.lang.Double) 29300.0,(java.lang.String) Maths, Chemistry,Hindi,History,Biology,Physics,(java.lang.String) Reading,(java.lang.String) C:\Users\A\eclipse-workspace\ABCD-main\ABCD-main\src\main\resources\screenShots\simple_01_05_2021_01_03_53.png,(java.lang.String) Mumbail near patole bridge ,(java.lang.String) Rajasthan,(java.lang.String) Jaipur]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+	at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">KTCTC.regression.StudentRegistrationFormTest#verifyUserCanNavigateToStudentsRegFormPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

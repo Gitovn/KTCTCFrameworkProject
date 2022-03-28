@@ -28,75 +28,18 @@ public class StudentRegistrationFormTest extends TestBase {
 		cmObj.navigateToReQuiredPage(driver, "Forms");
 		studentRegistrationForm.navigateToStudentRegistrationFormPage();
 	}
-
-	/*
-	 * @DataProvider(name = "getValueFromPropertyFile") public Object[][]
-	 * provideStudentsDetailsInKeyValuePair() {
-	 * 
-	 * PropertyFileHelper propertyHelper = new
-	 * PropertyFileHelper("Students Details.properties"); HashMap<String, String>
-	 * data = new HashMap<String, String>(); Object[][] file = new Object[0][12];
-	 * int i =0; for(Entry<String, String> each:data.entrySet()) { file[i][0] =
-	 * data.put(key, value) file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue();
-	 * 
-	 * file[i][0] = each.getKey(); file[i][1] = each.getValue(); i++; }
-	 * 
-	 * String email = propertyHelper.getPropertyValueFromFile("Email"); String
-	 * gender = propertyHelper.getPropertyValueFromFile("Gender"); String mbNo =
-	 * propertyHelper.getPropertyValueFromFile("Mobile"); String dOB =
-	 * propertyHelper.getPropertyValueFromFile("DateOfBirth"); String subject =
-	 * propertyHelper.getPropertyValueFromFile("Subjects"); String hobby =
-	 * propertyHelper.getPropertyValueFromFile("Hobbies"); String fileUpload =
-	 * propertyHelper.getPropertyValueFromFile("Picture"); String crrAddress =
-	 * propertyHelper.getPropertyValueFromFile("CurrentAddress"); String state =
-	 * propertyHelper.getPropertyValueFromFile("State"); String city =
-	 * propertyHelper.getPropertyValueFromFile("City");
-	 * 
-	 * return file; }
-	 */
-
-	@DataProvider(name = "getKeyValueFromHashmap")
-	public String[][] provideStudentsDetailsInKeyValuePair() {
-		ExcelHelper excelHelper = new ExcelHelper("MultipleData.xlsx", "StudentsInfo");
-		ArrayList<String> keys = excelHelper.getKeysListFromExcel();
-		ArrayList<String> values = excelHelper.getValuesListFromExcel();
-		String[][] data = new String[keys.size()][2];
-
-		for (int i = 0; i < keys.size(); i++) {
-			data[i][0] = keys.get(i);
-			data[i][1] = values.get(i);
-
-		}
-
+	
+	@DataProvider (name = "getTestData")
+	public Object[][] provideMultipleTestData() {
+		ExcelHelper2 excelHelper = new ExcelHelper2();
+		Object[][] data = excelHelper.getExcelData("C:\\Users\\A\\eclipse-workspace\\ABCD-main\\ABCD-main\\src\\main\\resources\\ExcelFile\\MultipleData.xlsx", "AllDetails");
 		return data;
-
 	}
-
-	@Test(dataProvider = "getKeyValueFromHashmap", dependsOnMethods = "verifyUserCanNavigateToStudentsRegFormPage")
-	public void verifyNewStudentsInformationCanBeFilledOnRegForm(String key, String value) {
-
-		//studentRegistrationForm.fillNewStudentsRegForm(fName, lName, email, gender, mbNo, dOB, subject, hobby,
-			//	fileUpload, crrAddress, state, city);
-		//studentRegistrationForm.isUserWithProvidedEmailIdDisplayed(email);
+	
+	@Test(dataProvider = "getTestData")
+	public void verifyNewStudentsInfoCanBeAddedOnFormPage(String firstName, String lastName, String email, String gender, Double mobile, Double date, String subjects, String hobbies, String picture, String currentAddress, String state, String city) {
+		
 	}
 }
+
+	
